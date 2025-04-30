@@ -6,6 +6,7 @@ import VerticalDomains from "@/components/home/vertical-domains"
 import ContactCta from "@/components/home/contact-cta"
 import Testimonials from "@/components/home/testimonials"
 import TechStack from "@/components/home/tech-stack"
+import CreativeSupport from "@/components/home/creative-support"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <AiAgents />
       <VerticalDomains />
       <ServicesOverview />
+      <CreativeSupport />
       <TechStack />
       <Testimonials />
       <ContactCta />

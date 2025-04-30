@@ -93,6 +93,10 @@
   .card-rotate-hover:hover {
     transform: perspective(1000px) rotateY(5deg) rotateX(5deg);
   }
+
+  .perspective-container {
+    perspective: 1500px;
+  }
 }
 
 @keyframes gradient {
