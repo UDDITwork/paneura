@@ -7,6 +7,7 @@ import ContactCta from "@/components/home/contact-cta"
 import Testimonials from "@/components/home/testimonials"
 import TechStack from "@/components/home/tech-stack"
 import CreativeSupport from "@/components/home/creative-support"
+import RapidWebsite from "@/components/home/rapid-website"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <VerticalDomains />
       <ServicesOverview />
       <CreativeSupport />
+      <RapidWebsite />
       <TechStack />
       <Testimonials />
       <ContactCta />
