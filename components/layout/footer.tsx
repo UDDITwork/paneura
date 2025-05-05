@@ -134,7 +134,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <Mail className="mr-2 h-5 w-5 text-primary" />
-                <span className="text-muted-foreground">queries@paneura.com</span>
+                <span className="text-muted-foreground">solutions@paneura.site</span>
               </li>
             </ul>
           </div>

@@ -7,10 +7,10 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative h-[70vh] overflow-hidden flex items-center">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="https://www.ashlingpartners.com/wp-content/uploads/2023/03/Achieve-Digital-Transformation-Through-Scalable-Automation.jpeg" 
-            alt="Digital Transformation" 
-            fill 
+          <Image
+            src="https://www.ashlingpartners.com/wp-content/uploads/2023/03/Achieve-Digital-Transformation-Through-Scalable-Automation.jpeg"
+            alt="Digital Transformation"
+            fill
             className="object-cover opacity-20"
             priority
           />
@@ -18,7 +18,8 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl text-slate-900 dark:text-white">
-              We're <span className="text-primary relative">
+              We're{" "}
+              <span className="text-primary relative">
                 PanEura
                 <span className="absolute -bottom-2 left-0 w-full h-1 bg-primary/70 rounded-full"></span>
               </span>
@@ -27,9 +28,15 @@ export default function AboutPage() {
               Bridging small businesses to the digital future
             </p>
             <div className="flex flex-wrap justify-center gap-3 text-sm">
-              <span className="px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium">10,000+ Businesses Empowered</span>
-              <span className="px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium">92% Client Growth Rate</span>
-              <span className="px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium">Digital-First Approach</span>
+              <span className="px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium">
+                10,000+ Businesses Empowered
+              </span>
+              <span className="px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium">
+                92% Client Growth Rate
+              </span>
+              <span className="px-3 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium">
+                Digital-First Approach
+              </span>
             </div>
           </div>
         </div>
@@ -43,30 +50,35 @@ export default function AboutPage() {
             <div className="aspect-square max-w-md mx-auto relative">
               <div className="absolute inset-0 border-2 border-primary rounded-lg transform rotate-6"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/5 dark:from-primary/30 dark:to-primary/10 rounded-lg transform -rotate-3"></div>
-              <Image 
-                src="https://pbs.twimg.com/media/GpazjCUbEAA78LX?format=jpg&name=4096x4096" 
-                alt="PanEura " 
-                width={500} 
-                height={500} 
+              <Image
+                src="https://pbs.twimg.com/media/GpazjCUbEAA78LX?format=jpg&name=4096x4096"
+                alt="PanEura "
+                width={500}
+                height={500}
                 className="rounded-lg relative z-10 object-cover shadow-xl"
               />
               <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-primary/10 dark:bg-primary/20 rounded-full"></div>
             </div>
           </div>
-          
+
           <div>
             <h2 className="text-3xl font-bold mb-6 flex items-center text-slate-900 dark:text-white">
               <span className="w-12 h-1 bg-primary mr-4"></span>
               Our Origin Story
             </h2>
             <p className="text-lg mb-6 text-slate-700 dark:text-slate-300">
-              PanEura began in 2018 when our founders witnessed countless small businesses struggling to navigate the digital landscape. Working from a small apartment with three passionate developers, we created our first automation solution for a local bakery that helped them manage online orders during the pandemic.
+              PanEura began in 2018 when our founders witnessed countless small businesses struggling to navigate the
+              digital landscape. Working from a small apartment with three passionate developers, we created our first
+              automation solution for a local bakery that helped them manage online orders during the pandemic.
             </p>
             <p className="text-lg mb-6 text-slate-700 dark:text-slate-300">
-              That single solution saved the bakery from closing its doors and sparked our mission: to democratize digital technology for businesses of all sizes. What started as a small project has now evolved into a company that has transformed thousands of MSMEs across the country.
+              That single solution saved the bakery from closing its doors and sparked our mission: to democratize
+              digital technology for businesses of all sizes. What started as a small project has now evolved into a
+              company that has transformed thousands of MSMEs across the country.
             </p>
             <blockquote className="border-l-4 border-primary pl-6 italic text-lg text-slate-600 dark:text-slate-400">
-              "Every business deserves the tools to thrive in the digital age. Technology shouldn't be a luxury, but a pathway to growth."
+              "Every business deserves the tools to thrive in the digital age. Technology shouldn't be a luxury, but a
+              pathway to growth."
               <footer className="mt-2 text-sm font-medium text-slate-500 dark:text-slate-500">— Core Belief</footer>
             </blockquote>
           </div>
@@ -79,7 +91,8 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-8 text-slate-900 dark:text-white">Our Mission in Action</h2>
             <p className="max-w-3xl mx-auto text-lg text-slate-700 dark:text-slate-300">
-              Every day, we witness the transformative power of digital adoption. Here are the stories that drive us forward.
+              Every day, we witness the transformative power of digital adoption. Here are the stories that drive us
+              forward.
             </p>
           </div>
 
@@ -88,20 +101,23 @@ export default function AboutPage() {
               {
                 icon: "🌱",
                 title: "A Small Farm's Global Reach",
-                content: "We helped an organic farm cooperative build an e-commerce platform that connected them directly to international markets, increasing their revenue by 340% in just 18 months."
+                content:
+                  "We helped an organic farm cooperative build an e-commerce platform that connected them directly to international markets, increasing their revenue by 340% in just 18 months.",
               },
               {
                 icon: "🛠️",
                 title: "The Artisan Revolution",
-                content: "A collective of traditional artisans was losing business to mass production. Our digital marketplace solution helped them showcase their craftsmanship to the world, preserving cultural heritage while boosting livelihoods."
+                content:
+                  "A collective of traditional artisans was losing business to mass production. Our digital marketplace solution helped them showcase their craftsmanship to the world, preserving cultural heritage while boosting livelihoods.",
               },
               {
                 icon: "📚",
                 title: "Education Without Borders",
-                content: "A rural tutoring service transformed into a digital learning platform with our help, now reaching students in 12 countries and employing three times the number of local teachers."
-              }
+                content:
+                  "A rural tutoring service transformed into a digital learning platform with our help, now reaching students in 12 countries and employing three times the number of local teachers.",
+              },
             ].map((story, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300"
               >
@@ -120,7 +136,9 @@ export default function AboutPage() {
       {/* Values Section with Interactive Cards */}
       <section className="container mx-auto px-4 py-24">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium text-sm mb-4">OUR CORE VALUES</span>
+          <span className="inline-block px-4 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium text-sm mb-4">
+            OUR CORE VALUES
+          </span>
           <h2 className="text-4xl font-bold mb-6 text-slate-900 dark:text-white">What Drives Us Every Day</h2>
           <p className="max-w-3xl mx-auto text-lg text-slate-700 dark:text-slate-300">
             These principles guide every solution we create and every relationship we build.
@@ -131,45 +149,48 @@ export default function AboutPage() {
           {[
             {
               title: "People-First Innovation",
-              content: "We don't create technology for technology's sake. Every innovation we develop starts with understanding the human needs behind business challenges.",
+              content:
+                "We don't create technology for technology's sake. Every innovation we develop starts with understanding the human needs behind business challenges.",
               color: "from-blue-500/20 to-blue-600/20",
-              icon: "👥"
+              icon: "👥",
             },
             {
               title: "Accessible Excellence",
-              content: "We believe that world-class digital solutions should be accessible to businesses of all sizes. Sophistication doesn't have to mean complexity or high costs.",
+              content:
+                "We believe that world-class digital solutions should be accessible to businesses of all sizes. Sophistication doesn't have to mean complexity or high costs.",
               color: "from-green-500/20 to-green-600/20",
-              icon: "🌟"
+              icon: "🌟",
             },
             {
               title: "Growth Partnership",
-              content: "Your success is our success. We don't just deliver solutions—we become growth partners invested in your long-term prosperity and digital evolution.",
+              content:
+                "Your success is our success. We don't just deliver solutions—we become growth partners invested in your long-term prosperity and digital evolution.",
               color: "from-amber-500/20 to-amber-600/20",
-              icon: "🤝"
+              icon: "🤝",
             },
             {
               title: "Cultural Sensitivity",
-              content: "We understand that businesses operate within unique cultural contexts. Our solutions respect and adapt to diverse business environments.",
+              content:
+                "We understand that businesses operate within unique cultural contexts. Our solutions respect and adapt to diverse business environments.",
               color: "from-purple-500/20 to-purple-600/20",
-              icon: "🌍"
+              icon: "🌍",
             },
             {
               title: "Sustainable Digitalization",
-              content: "We create digital solutions that not only drive growth today but establish sustainable foundations for future technological advancement.",
+              content:
+                "We create digital solutions that not only drive growth today but establish sustainable foundations for future technological advancement.",
               color: "from-teal-500/20 to-teal-600/20",
-              icon: "♻️"
+              icon: "♻️",
             },
             {
               title: "Learning Ecosystem",
-              content: "We build solutions that grow smarter with your business, creating ecosystems of continuous improvement and adaptation.",
+              content:
+                "We build solutions that grow smarter with your business, creating ecosystems of continuous improvement and adaptation.",
               color: "from-rose-500/20 to-rose-600/20",
-              icon: "🧠"
-            }
+              icon: "🧠",
+            },
           ].map((value, index) => (
-            <div
-              key={index}
-              className="group"
-            >
+            <div key={index} className="group">
               <Card className="h-full border-none shadow-lg overflow-hidden hover:-translate-y-2 transition-all duration-300 bg-white dark:bg-slate-800">
                 <div className={`h-2 w-full bg-gradient-to-r ${value.color}`}></div>
                 <CardContent className="p-8">
@@ -187,7 +208,9 @@ export default function AboutPage() {
       <section className="bg-slate-900 text-white py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-white font-medium text-sm mb-4">OUR METHODOLOGY</span>
+            <span className="inline-block px-4 py-1 rounded-full bg-white/10 text-white font-medium text-sm mb-4">
+              OUR METHODOLOGY
+            </span>
             <h2 className="text-4xl font-bold mb-6 text-white">How We Transform Businesses</h2>
             <p className="max-w-3xl mx-auto text-lg text-slate-300">
               Our proven four-step approach has helped thousands of businesses make the digital leap with confidence.
@@ -199,28 +222,29 @@ export default function AboutPage() {
               {
                 number: "01",
                 title: "Deep Discovery",
-                content: "We immerse ourselves in your business reality—understanding your operations, challenges, customers, and aspirations beyond surface level."
+                content:
+                  "We immerse ourselves in your business reality—understanding your operations, challenges, customers, and aspirations beyond surface level.",
               },
               {
                 number: "02",
                 title: "Strategic Design",
-                content: "We craft digital solutions that address both your immediate pain points and long-term growth objectives, creating a roadmap for transformation."
+                content:
+                  "We craft digital solutions that address both your immediate pain points and long-term growth objectives, creating a roadmap for transformation.",
               },
               {
                 number: "03",
                 title: "Agile Implementation",
-                content: "We build and deploy solutions in stages, allowing for real-world testing, feedback integration, and quick adaptation to changing needs."
+                content:
+                  "We build and deploy solutions in stages, allowing for real-world testing, feedback integration, and quick adaptation to changing needs.",
               },
               {
                 number: "04",
                 title: "Growth Acceleration",
-                content: "We continuously optimize your digital assets, measure outcomes against business goals, and identify new opportunities for digital leverage."
-              }
+                content:
+                  "We continuously optimize your digital assets, measure outcomes against business goals, and identify new opportunities for digital leverage.",
+              },
             ].map((step, index) => (
-              <div
-                key={index}
-                className="relative"
-              >
+              <div key={index} className="relative">
                 <div className="border border-white/10 dark:border-primary/30 rounded-xl p-8 h-full bg-gradient-to-b from-white/5 to-transparent backdrop-blur-sm hover:border-primary/30 transition-colors duration-300">
                   <span className="text-5xl font-bold text-primary/70 mb-6 block">{step.number}</span>
                   <h3 className="text-xl font-semibold mb-4 text-white">{step.title}</h3>
@@ -229,7 +253,7 @@ export default function AboutPage() {
                 {index < 3 && (
                   <div className="hidden lg:block absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 z-10">
                     <svg width="40" height="12" viewBox="0 0 40 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 6H38M38 6L33 1M38 6L33 11" stroke="rgba(255,255,255,0.3)" strokeWidth="2"/>
+                      <path d="M0 6H38M38 6L33 1M38 6L33 11" stroke="rgba(255,255,255,0.3)" strokeWidth="2" />
                     </svg>
                   </div>
                 )}
@@ -244,7 +268,8 @@ export default function AboutPage() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6 text-slate-900 dark:text-white">Our Digital Footprint</h2>
           <p className="max-w-3xl mx-auto text-lg text-slate-700 dark:text-slate-300">
-            From rural handicraft producers to urban service providers, we've helped businesses across diverse sectors embrace digital transformation.
+            From rural handicraft producers to urban service providers, we've helped businesses across diverse sectors
+            embrace digital transformation.
           </p>
         </div>
 
@@ -275,10 +300,10 @@ export default function AboutPage() {
               </button>
             </div>
           </div>
-          <Image 
-            src="https://pbs.twimg.com/media/Gpa1YarXkAAZSHR?format=jpg&name=large" 
-            alt="PanEura Global Impact Map" 
-            fill 
+          <Image
+            src="https://pbs.twimg.com/media/Gpa1YarXkAAZSHR?format=jpg&name=large"
+            alt="PanEura Global Impact Map"
+            fill
             className="object-cover"
           />
         </div>
@@ -289,9 +314,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6 text-slate-900 dark:text-white">Ready to Join the Digital Revolution?</h2>
+              <h2 className="text-4xl font-bold mb-6 text-slate-900 dark:text-white">
+                Ready to Join the Digital Revolution?
+              </h2>
               <p className="text-lg mb-8 text-slate-700 dark:text-slate-300">
-                Whether you're taking your first digital steps or looking to scale your existing online presence, we're here to guide your journey. Let's write your digital success story together.
+                Whether you're taking your first digital steps or looking to scale your existing online presence, we're
+                here to guide your journey. Let's write your digital success story together.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <button className="px-8 py-4 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
@@ -311,22 +339,24 @@ export default function AboutPage() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6 text-slate-900 dark:text-white">The Minds Behind PanEura</h2>
           <p className="max-w-3xl mx-auto text-lg text-slate-700 dark:text-slate-300">
-            A diverse team of technologists, designers, and business strategists united by the mission to democratize digital transformation.
+            A diverse team of technologists, designers, and business strategists united by the mission to democratize
+            digital transformation.
           </p>
         </div>
 
         <div className="relative h-[400px] rounded-xl overflow-hidden shadow-xl group">
-          <Image 
-            src="https://pbs.twimg.com/media/Gpa30iHXMAERssD?format=jpg&name=large" 
-            alt="PanEura Team" 
-            fill 
+          <Image
+            src="https://pbs.twimg.com/media/Gpa30iHXMAERssD?format=jpg&name=large"
+            alt="PanEura Team"
+            fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent flex items-end">
             <div className="p-8 text-white">
               <p className="text-xl font-medium mb-2">Join Our Team</p>
               <p className="max-w-md">
-                We're always looking for passionate individuals who believe in the power of technology to transform businesses and communities.
+                We're always looking for passionate individuals who believe in the power of technology to transform
+                businesses and communities.
               </p>
               <button className="mt-4 px-6 py-2 bg-white text-primary rounded-lg font-medium hover:bg-white/90 transition-colors">
                 View Careers
@@ -335,52 +365,60 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      
+
       {/* Digital Transformation Journey */}
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-6 text-slate-900 dark:text-white">Your Digital Transformation Journey</h2>
+          <h2 className="text-4xl font-bold mb-6 text-slate-900 dark:text-white">
+            Your Digital Transformation Journey
+          </h2>
           <p className="max-w-3xl mx-auto text-lg text-slate-700 dark:text-slate-300">
             See how businesses like yours have evolved with our guidance
           </p>
         </div>
-        
+
         <div className="relative">
           <div className="absolute left-1/2 top-0 h-full w-1 bg-primary/20 dark:bg-primary/40 -translate-x-1/2 hidden md:block"></div>
-          
+
           <div className="space-y-24">
             {[
               {
                 stage: "Starting Point",
                 title: "Traditional Business Challenges",
-                description: "Limited customer reach, manual processes draining resources, competition from digital natives threatening market share.",
+                description:
+                  "Limited customer reach, manual processes draining resources, competition from digital natives threatening market share.",
                 result: "Businesses feeling left behind in the digital revolution",
-                icon: "🏪"
+                icon: "🏪",
               },
               {
                 stage: "Transformation",
                 title: "Digital Infrastructure Development",
-                description: "Building customized digital solutions, automating core processes, establishing online presence, training team members.",
+                description:
+                  "Building customized digital solutions, automating core processes, establishing online presence, training team members.",
                 result: "Businesses operating with newfound efficiency and reach",
-                icon: "⚙️"
+                icon: "⚙️",
               },
               {
                 stage: "Growth",
                 title: "Market Expansion & Optimization",
-                description: "Leveraging data insights, refining digital strategy, expanding to new markets, innovating product offerings.",
+                description:
+                  "Leveraging data insights, refining digital strategy, expanding to new markets, innovating product offerings.",
                 result: "Businesses experiencing exponential growth and recognition",
-                icon: "📈"
+                icon: "📈",
               },
               {
                 stage: "Leadership",
                 title: "Digital Innovation Leaders",
-                description: "Setting industry standards, pioneering new approaches, mentoring other businesses, continuous evolution.",
+                description:
+                  "Setting industry standards, pioneering new approaches, mentoring other businesses, continuous evolution.",
                 result: "Businesses leading their industries into the future",
-                icon: "🏆"
-              }
+                icon: "🏆",
+              },
             ].map((journey, index) => (
               <div key={index} className="relative md:grid md:grid-cols-2 gap-8 items-center">
-                <div className={`bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg ${index % 2 === 1 ? "md:col-start-2" : ""}`}>
+                <div
+                  className={`bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg ${index % 2 === 1 ? "md:col-start-2" : ""}`}
+                >
                   <span className="inline-block mb-3 text-4xl">{journey.icon}</span>
                   <h3 className="text-sm uppercase tracking-wider text-primary font-medium mb-2">{journey.stage}</h3>
                   <h4 className="text-xl font-bold mb-4 text-slate-900 dark:text-white">{journey.title}</h4>
@@ -389,7 +427,7 @@ export default function AboutPage() {
                     {journey.result}
                   </div>
                 </div>
-                
+
                 <div className="hidden md:block absolute left-1/2 top-1/2 w-12 h-12 bg-primary text-white rounded-full -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-xl font-bold">
                   {index + 1}
                 </div>
@@ -398,60 +436,124 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      
+
       {/* Testimonials */}
       <section className="bg-primary/5 dark:bg-primary/15 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium text-sm mb-4">SUCCESS STORIES</span>
+            <span className="inline-block px-4 py-1 rounded-full bg-primary/10 dark:bg-primary/20 text-primary font-medium text-sm mb-4">
+              SUCCESS STORIES
+            </span>
             <h2 className="text-4xl font-bold mb-6 text-slate-900 dark:text-white">Voices of Transformation</h2>
             <p className="max-w-3xl mx-auto text-lg text-slate-700 dark:text-slate-300">
               Hear directly from the entrepreneurs whose businesses evolved with our support
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                quote: "I was skeptical about going digital - my family business had operated the same way for 40 years. Now I can't imagine how we survived without these tools. Our customer base has tripled!",
+                quote:
+                  "I was skeptical about going digital - my family business had operated the same way for 40 years. Now I can't imagine how we survived without these tools. Our customer base has tripled!",
                 author: "Rajiv Mehta",
                 business: "Mehta Textiles, Jaipur",
-                image: "https://pbs.twimg.com/media/Gpa2Ga2XcAA9D6N?format=jpg&name=4096x4096"
+                image: "https://pbs.twimg.com/media/Gpa2Ga2XcAA9D6N?format=jpg&name=4096x4096",
               },
               {
-                quote: "PanEura didn't just give us technology - they gave us a vision of what our business could become. They understood our cultural context and helped us preserve our heritage while reaching global markets.",
+                quote:
+                  "PanEura didn't just give us technology - they gave us a vision of what our business could become. They understood our cultural context and helped us preserve our heritage while reaching global markets.",
                 author: "Amina Khatun",
                 business: "Khatun Handicrafts Collective",
-                image: "https://pbs.twimg.com/media/FwJTnIOaYAAeGKO?format=jpg&name=small"
+                image: "https://pbs.twimg.com/media/FwJTnIOaYAAeGKO?format=jpg&name=small",
               },
               {
-                quote: "The personalized approach made all the difference. They took time to understand our unique challenges as a rural service provider before suggesting any solutions. Five years later, we're still growing.",
+                quote:
+                  "The personalized approach made all the difference. They took time to understand our unique challenges as a rural service provider before suggesting any solutions. Five years later, we're still growing.",
                 author: "Thomas Varghese",
                 business: "GreenHarvest Supply Chain",
-                image: "https://pbs.twimg.com/profile_images/1233738004/DSC0039022_400x400.jpg"
-              }
+                image: "https://pbs.twimg.com/profile_images/1233738004/DSC0039022_400x400.jpg",
+              },
             ].map((testimonial, index) => (
-              <div key={index} className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div
+                key={index}
+                className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                     <Image
-                      src={testimonial.image}
-                      alt={testimonial.author}
+                      src="https://randomuser.me/api/portraits/men/75.jpg"
+                      alt="Amit Verma"
                       width={64}
                       height={64}
                       className="object-cover"
                     />
                   </div>
                   <div>
-                    <p className="font-medium text-slate-900 dark:text-white">{testimonial.author}</p>
-                    <p className="text-sm text-slate-500 dark:text-slate-500">{testimonial.business}</p>
+                    <p className="font-medium text-slate-900 dark:text-white">Amit Verma</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-500">March 12, 2023</p>
                   </div>
                 </div>
-                <blockquote className="italic text-slate-700 dark:text-slate-300">"{testimonial.quote}"</blockquote>
+                <blockquote className="italic text-slate-700 dark:text-slate-300">
+                  "I was skeptical about going digital - my family business had operated the same way for 40 years. Now
+                  I can't imagine how we survived without these tools. Our customer base has tripled!"
+                </blockquote>
+              </div>
+            ))}
+            {[].map((testimonial, index) => (
+              <div
+                key={index + 1}
+                className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                    <Image
+                      src="https://randomuser.me/api/portraits/women/65.jpg"
+                      alt="Meera Khatun"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-medium text-slate-900 dark:text-white">Meera Khatun</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-500">July 8, 2023</p>
+                  </div>
+                </div>
+                <blockquote className="italic text-slate-700 dark:text-slate-300">
+                  "PanEura didn't just give us technology - they gave us a vision of what our business could become.
+                  They understood our cultural context and helped us preserve our heritage while reaching global
+                  markets."
+                </blockquote>
+              </div>
+            ))}
+            {[].map((testimonial, index) => (
+              <div
+                key={index + 2}
+                className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                    <Image
+                      src="https://randomuser.me/api/portraits/men/22.jpg"
+                      alt="Suresh Varghese"
+                      width={64}
+                      height={64}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-medium text-slate-900 dark:text-white">Suresh Varghese</p>
+                    <p className="text-sm text-slate-500 dark:text-slate-500">November 15, 2023</p>
+                  </div>
+                </div>
+                <blockquote className="italic text-slate-700 dark:text-slate-300">
+                  "The personalized approach made all the difference. They took time to understand our unique challenges
+                  as a rural service provider before suggesting any solutions. Five years later, we're still growing."
+                </blockquote>
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <button className="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary/90 transition-colors">
               Read More Stories

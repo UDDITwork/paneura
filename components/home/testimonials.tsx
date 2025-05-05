@@ -8,48 +8,44 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react"
 import { ScrollReveal } from "@/components/ui/animated-background"
 
+// Update the testimonials array with Indian names, dates, and real profile images
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO",
-    company: "TechStart Solutions",
-    image: "/placeholder.svg?height=100&width=100",
+    name: "Rajesh Sharma",
+    date: "15 April, 2023",
+    image: "https://randomuser.me/api/portraits/men/44.jpg",
     content:
       "PanEura Automations transformed our business operations completely. Their AI-powered automation solutions reduced our manual workload by 75% and improved our customer response time dramatically. The team was professional, knowledgeable, and responsive throughout the entire process.",
     rating: 5,
   },
   {
-    name: "Michael Chen",
-    role: "CTO",
-    company: "GrowthForge",
-    image: "/placeholder.svg?height=100&width=100",
+    name: "Ananya Patel",
+    date: "23 June, 2023",
+    image: "https://randomuser.me/api/portraits/women/33.jpg",
     content:
       "We approached PanEura to help streamline our customer onboarding process. Not only did they deliver an exceptional solution, but they also identified other areas where automation could benefit our business. Their custom CRM integration has been a game-changer for our sales team.",
     rating: 5,
   },
   {
-    name: "Priya Patel",
-    role: "Operations Director",
-    company: "Nexus Retail",
-    image: "/placeholder.svg?height=100&width=100",
+    name: "Vikram Malhotra",
+    date: "7 August, 2023",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     content:
       "The e-commerce automation infrastructure PanEura built for us has allowed us to scale our online business without increasing our operational team. Their solution handles inventory management, order processing, and customer communications seamlessly. Highly recommended!",
     rating: 4,
   },
   {
-    name: "David Wilson",
-    role: "Marketing Manager",
-    company: "Elevate Digital",
-    image: "/placeholder.svg?height=100&width=100",
+    name: "Neha Gupta",
+    date: "19 October, 2023",
+    image: "https://randomuser.me/api/portraits/women/26.jpg",
     content:
       "PanEura's email marketing automation system has revolutionized our campaign management. The behavior-triggered flows and AI-driven analytics have significantly improved our conversion rates. Their team took the time to understand our specific needs and delivered beyond our expectations.",
     rating: 5,
   },
   {
-    name: "Aisha Rahman",
-    role: "HR Director",
-    company: "InnovateCorp",
-    image: "/placeholder.svg?height=100&width=100",
+    name: "Arjun Reddy",
+    date: "5 January, 2024",
+    image: "https://randomuser.me/api/portraits/men/11.jpg",
     content:
       "Implementing PanEura's HR dashboard and employee attendance system has streamlined our HR processes tremendously. The intuitive interface and comprehensive reporting features have made managing our growing team much more efficient. Their support team is always quick to respond to any questions.",
     rating: 5,
@@ -181,14 +177,14 @@ export default function Testimonials() {
 interface TestimonialCardProps {
   testimonial: {
     name: string
-    role: string
-    company: string
+    date: string
     image: string
     content: string
     rating: number
   }
 }
 
+// Update the TestimonialCard component to show date instead of role/company
 function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <Card className="h-full transform transition-all duration-300 hover:shadow-lg card-rotate-hover">
@@ -203,9 +199,7 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
             </motion.div>
             <div>
               <h3 className="font-semibold">{testimonial.name}</h3>
-              <p className="text-sm text-muted-foreground">
-                {testimonial.role}, {testimonial.company}
-              </p>
+              <p className="text-sm text-muted-foreground">{testimonial.date}</p>
             </div>
           </div>
           <motion.div

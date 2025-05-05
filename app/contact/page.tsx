@@ -52,7 +52,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium">Email</h3>
-                  <p className="text-muted-foreground">queries@paneura.com</p>
+                  <p className="text-muted-foreground">solutions@paneura.site</p>
                 </div>
               </CardContent>
             </Card>
