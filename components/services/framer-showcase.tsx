@@ -18,35 +18,40 @@ export default function FramerShowcase() {
     {
       title: "Refit",
       description: "Interior design portfolio with elegant dark theme and minimalist aesthetics",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9.jpeg",
+      image:
+        "https://sjc.microlink.io/slKprwwOfoiopZVf2FtXq2bPuhumJ5E6zV77UOsXtSOoFUKmjp_9eAios8zul3u8hJy2JVa-lkojGbBdXap_Bg.jpeg",
       url: "https://diverse-structure-482138.framer.app/",
       color: "from-gray-900 to-gray-800",
     },
     {
       title: "Bloom",
       description: "Meditation app with soothing design and intuitive user experience",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd9Yd8.jpeg",
+      image:
+        "https://sjc.microlink.io/Ur_iZHaEEPCszFofmNe0N8_pBTwJzzNCfkgEKpykYIfkeLSdmqPDVT-emtGA3WGR_YUOd_o_8nOuLPYGxTEf8w.jpeg",
       url: "https://complex-approach-155692.framer.app/",
       color: "from-pink-100 to-pink-50",
     },
     {
       title: "Fintech Dashboard",
       description: "Modern financial analytics platform with interactive data visualization",
-      image: "https://framerusercontent.com/images/qJeaFhqwGRMVQ5WY9WpPvyaA.jpg",
+      image:
+        "https://img.freepik.com/free-vector/user-panel-template-infographic-dashboard_23-2148378206.jpg?semt=ais_hybrid&w=740",
       url: "https://amicable-absolute-164388.framer.app/",
       color: "from-blue-900 to-indigo-900",
     },
     {
       title: "Ecommerce Store",
       description: "Premium shopping experience with smooth animations and transitions",
-      image: "https://framerusercontent.com/images/3juXnjaLjZcbX4yCTlIoB4H130.jpg?scale-down-to=1024",
+      image:
+        "https://sjc.microlink.io/RXZ2jO88-svQgXxVxq_sZQ9qfUP1lKicNl9PmgnkA5jbSkOKUhIT_iqzJPEBBxC5lM5WgRyv9QjWjIkv4hOV7Q.jpeg",
       url: "https://broader-let-374863.framer.app/",
       color: "from-emerald-100 to-teal-50",
     },
     {
       title: "Creative Agency",
       description: "Portfolio showcase with immersive scrolling and interactive elements",
-      image: "https://framerusercontent.com/images/AX9PukosNfGVcfXw4kQzQJU3MY.jpg?scale-down-to=1024",
+      image:
+        "https://www.ibrandox.com/IbrandoxBackEndImage/BlogImage/development-how-to-choose-the-best-creative-agency.jpg",
       url: "https://capable-popover-070263.framer.app/",
       color: "from-purple-900 to-violet-800",
     },
