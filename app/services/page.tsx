@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Check } from "lucide-react"
 import ServiceCard from "@/components/services/service-card"
+import FramerShowcase from "@/components/services/framer-showcase"
 
 export default function ServicesPage() {
   const services = [
@@ -161,6 +162,11 @@ export default function ServicesPage() {
         {services.map((service, index) => (
           <ServiceCard key={index} service={service} />
         ))}
+      </div>
+
+      {/* Add Framer Showcase section */}
+      <div className="mt-24">
+        <FramerShowcase />
       </div>
 
       <div className="mt-20">
