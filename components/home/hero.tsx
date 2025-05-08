@@ -66,7 +66,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Intelligent Digital <AnimatedGradientText>Infrastructure</AnimatedGradientText> for Small Businesses
+            <AnimatedGradientText>{PanEura Automations}</AnimatedGradientText> Get Rid of Boring Tasks with Ai.
           </motion.h1>
 
           <motion.p
