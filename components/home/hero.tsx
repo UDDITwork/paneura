@@ -60,14 +60,17 @@ export default function Hero() {
 
       <div className="container relative z-10 mx-auto grid max-w-screen-xl gap-12 px-4 md:grid-cols-2 md:px-8">
         <ScrollReveal className="flex flex-col justify-center">
-          <motion.h1
-            className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl"
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="mb-6"
           >
-            <AnimatedGradientText>{"PanEura Automations"}</AnimatedGradientText> Get Rid of Boring Tasks with Ai.
-          </motion.h1>
+            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+              <AnimatedGradientText>{"PanEura Automations"}</AnimatedGradientText>
+            </h1>
+            <p className="text-2xl md:text-3xl mt-2 font-medium">Get Rid of Boring Tasks with Ai.</p>
+          </motion.div>
 
           <motion.p
             className="mb-8 text-lg text-muted-foreground md:text-xl"
