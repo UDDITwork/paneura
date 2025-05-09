@@ -23,8 +23,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="https://pbs.twimg.com/media/GpaQJvnbIAAZXQc?format=jpg&name=small
-"
+            src="https://pbs.twimg.com/media/GpaQJvnbIAAZXQc?format=jpg&name=small"
             alt="PanEura Automations Logo"
             width={40}
             height={40}
