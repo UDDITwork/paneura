@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Menu } from "lucide-react"
@@ -22,13 +21,9 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="https://pbs.twimg.com/media/GpaQJvnbIAAZXQc?format=jpg&name=small"
-            alt="PanEura Automations Logo"
-            width={40}
-            height={40}
-            className="rounded-md"
-          />
+          <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary text-primary-foreground font-mono text-sm font-bold">
+            {"{/}"}
+          </div>
           <span className="text-xl font-bold">PanEura</span>
         </Link>
 
