@@ -5,52 +5,62 @@ import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 
 export function AnimatedBackground() {
+  // Add a check for mobile devices to simplify animations
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768
+
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden opacity-30">
       <div className="absolute inset-0 bg-background/80 backdrop-blur-3xl" />
 
-      {/* Animated gradient blobs */}
-      <motion.div
-        className="absolute -left-20 -top-20 h-[30rem] w-[30rem] rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 blur-3xl"
-        animate={{
-          x: [0, 30, 0],
-          y: [0, 40, 0],
-          scale: [1, 1.1, 1],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-        }}
-      />
+      {/* Reduce number of animated elements on mobile */}
+      {!isMobile ? (
+        <>
+          <motion.div
+            className="absolute -left-20 -top-20 h-[30rem] w-[30rem] rounded-full bg-gradient-to-br from-primary/20 to-purple-500/20 blur-3xl"
+            animate={{
+              x: [0, 30, 0],
+              y: [0, 40, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Number.POSITIVE_INFINITY,
+              repeatType: "reverse",
+            }}
+          />
 
-      <motion.div
-        className="absolute -bottom-32 right-0 h-[35rem] w-[35rem] rounded-full bg-gradient-to-tr from-blue-500/10 to-primary/20 blur-3xl"
-        animate={{
-          x: [0, -40, 0],
-          y: [0, 30, 0],
-          scale: [1, 1.2, 1],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-        }}
-      />
+          <motion.div
+            className="absolute -bottom-32 right-0 h-[35rem] w-[35rem] rounded-full bg-gradient-to-tr from-blue-500/10 to-primary/20 blur-3xl"
+            animate={{
+              x: [0, -40, 0],
+              y: [0, 30, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 25,
+              repeat: Number.POSITIVE_INFINITY,
+              repeatType: "reverse",
+            }}
+          />
 
-      <motion.div
-        className="absolute left-1/3 top-1/3 h-[25rem] w-[25rem] rounded-full bg-gradient-to-r from-cyan-500/10 to-indigo-500/10 blur-3xl"
-        animate={{
-          x: [0, 60, 0],
-          y: [0, -30, 0],
-          scale: [1, 1.1, 1],
-        }}
-        transition={{
-          duration: 18,
-          repeat: Number.POSITIVE_INFINITY,
-          repeatType: "reverse",
-        }}
-      />
+          <motion.div
+            className="absolute left-1/3 top-1/3 h-[25rem] w-[25rem] rounded-full bg-gradient-to-r from-cyan-500/10 to-indigo-500/10 blur-3xl"
+            animate={{
+              x: [0, 60, 0],
+              y: [0, -30, 0],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 18,
+              repeat: Number.POSITIVE_INFINITY,
+              repeatType: "reverse",
+            }}
+          />
+        </>
+      ) : (
+        // Simplified version for mobile
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-purple-500/5 to-blue-500/5" />
+      )}
     </div>
   )
 }
@@ -78,19 +88,31 @@ export function FloatingElement({
   distance?: number
   className?: string
 }) {
+  // Check if we should disable animations for performance
+  const shouldAnimate =
+    typeof document !== "undefined" && !document.documentElement.classList.contains("low-performance-mode")
+
   return (
     <motion.div
       className={className}
-      animate={{
-        y: [-distance / 2, distance / 2, -distance / 2],
-      }}
-      transition={{
-        duration: duration,
-        repeat: Number.POSITIVE_INFINITY,
-        repeatType: "loop",
-        ease: "easeInOut",
-        delay: delay,
-      }}
+      animate={
+        shouldAnimate
+          ? {
+              y: [-distance / 2, distance / 2, -distance / 2],
+            }
+          : {}
+      }
+      transition={
+        shouldAnimate
+          ? {
+              duration: duration,
+              repeat: Number.POSITIVE_INFINITY,
+              repeatType: "loop",
+              ease: "easeInOut",
+              delay: delay,
+            }
+          : {}
+      }
     >
       {children}
     </motion.div>

@@ -5,8 +5,13 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/layout/navbar"
 import Footer from "@/components/layout/footer"
 import { AnimatedBackground } from "@/components/ui/animated-background"
+import { PerformanceOptimizer } from "@/components/performance-optimizer"
+import { DeferResources } from "@/components/defer-resources"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap", // Add this for better font loading performance
+})
 
 export const metadata = {
   title: "PanEura Automations | Intelligent Digital Infrastructure",
@@ -24,6 +29,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <PerformanceOptimizer />
+          <DeferResources />
           <AnimatedBackground />
           <div className="flex min-h-screen flex-col">
             <Navbar />

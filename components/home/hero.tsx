@@ -67,7 +67,7 @@ export default function Hero() {
             className="mb-6"
           >
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              <AnimatedGradientText>{"PanEura Automations"}</AnimatedGradientText>
+              <AnimatedGradientText>{"{PanEura Automations}"}</AnimatedGradientText>
             </h1>
             <p className="text-2xl md:text-3xl mt-2 font-medium">Get Rid of Boring Tasks with Ai.</p>
           </motion.div>
@@ -166,6 +166,7 @@ export default function Hero() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         className="text-primary"
+                        aria-hidden="true"
                       >
                         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                         <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
