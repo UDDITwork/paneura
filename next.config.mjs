@@ -16,10 +16,9 @@ const nextConfig = {
         hostname: '**',
       },
     ],
-    unoptimized: true,
   },
   experimental: {
-    optimizeCss: true,
+    // Removing optimizeCss: true since critters package is missing
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
 }
