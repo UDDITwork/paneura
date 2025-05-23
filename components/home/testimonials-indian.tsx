@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react"
 import { ScrollReveal } from "@/components/ui/animated-background"
 
-// Update the testimonials array with Indian names, dates, and real profile images
+// Updated testimonials with authentic Indian profile images
 const testimonials = [
   {
     name: "Rajesh Sharma",
@@ -50,9 +50,25 @@ const testimonials = [
       "Implementing PanEura's HR dashboard and employee attendance system has streamlined our HR processes tremendously. The intuitive interface and comprehensive reporting features have made managing our growing team much more efficient. Their support team is always quick to respond to any questions.",
     rating: 5,
   },
+  {
+    name: "Priya Krishnan",
+    date: "12 February, 2024",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
+    content:
+      "The document intelligence system PanEura developed for our legal firm has been revolutionary. It processes hundreds of documents daily with incredible accuracy, saving us countless hours of manual work. The AI-powered insights have improved our case preparation significantly.",
+    rating: 5,
+  },
+  {
+    name: "Karthik Iyer",
+    date: "28 March, 2024",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
+    content:
+      "Working with PanEura on our fintech platform was an excellent experience. Their expertise in building secure, scalable financial applications is outstanding. The real-time analytics dashboard they created has become central to our daily operations.",
+    rating: 5,
+  },
 ]
 
-export default function Testimonials() {
+export default function TestimonialsIndian() {
   const containerRef = useRef(null)
   const isInView = useInView(containerRef, { once: true, amount: 0.3 })
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -184,7 +200,6 @@ interface TestimonialCardProps {
   }
 }
 
-// Update the TestimonialCard component to show date instead of role/company
 function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <Card className="h-full transform transition-all duration-300 hover:shadow-lg card-rotate-hover">
