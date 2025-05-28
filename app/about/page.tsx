@@ -1,19 +1,14 @@
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
+import NeuralNetworkAnimation from "@/components/about/neural-network-animation"
 
 export default function AboutPage() {
   return (
     <main className="bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with Neural Network Animation */}
       <section className="relative h-[70vh] overflow-hidden flex items-center">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="https://www.ashlingpartners.com/wp-content/uploads/2023/03/Achieve-Digital-Transformation-Through-Scalable-Automation.jpeg"
-            alt="Digital Transformation"
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
+          <NeuralNetworkAnimation />
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -450,108 +445,74 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                quote:
-                  "I was skeptical about going digital - my family business had operated the same way for 40 years. Now I can't imagine how we survived without these tools. Our customer base has tripled!",
-                author: "Rajiv Mehta",
-                business: "Mehta Textiles, Jaipur",
-                image: "https://pbs.twimg.com/media/Gpa2Ga2XcAA9D6N?format=jpg&name=4096x4096",
-              },
-              {
-                quote:
-                  "PanEura didn't just give us technology - they gave us a vision of what our business could become. They understood our cultural context and helped us preserve our heritage while reaching global markets.",
-                author: "Amina Khatun",
-                business: "Khatun Handicrafts Collective",
-                image: "https://pbs.twimg.com/media/FwJTnIOaYAAeGKO?format=jpg&name=small",
-              },
-              {
-                quote:
-                  "The personalized approach made all the difference. They took time to understand our unique challenges as a rural service provider before suggesting any solutions. Five years later, we're still growing.",
-                author: "Thomas Varghese",
-                business: "GreenHarvest Supply Chain",
-                image: "https://pbs.twimg.com/profile_images/1233738004/DSC0039022_400x400.jpg",
-              },
-            ].map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
-                    <Image
-                      src="https://randomuser.me/api/portraits/men/75.jpg"
-                      alt="Amit Verma"
-                      width={64}
-                      height={64}
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-medium text-slate-900 dark:text-white">Amit Verma</p>
-                    <p className="text-sm text-slate-500 dark:text-slate-500">March 12, 2023</p>
-                  </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+                    alt="Amit Verma"
+                    width={64}
+                    height={64}
+                    className="object-cover"
+                  />
                 </div>
-                <blockquote className="italic text-slate-700 dark:text-slate-300">
-                  "I was skeptical about going digital - my family business had operated the same way for 40 years. Now
-                  I can't imagine how we survived without these tools. Our customer base has tripled!"
-                </blockquote>
-              </div>
-            ))}
-            {[].map((testimonial, index) => (
-              <div
-                key={index + 1}
-                className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
-                    <Image
-                      src="https://randomuser.me/api/portraits/women/65.jpg"
-                      alt="Meera Khatun"
-                      width={64}
-                      height={64}
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-medium text-slate-900 dark:text-white">Meera Khatun</p>
-                    <p className="text-sm text-slate-500 dark:text-slate-500">July 8, 2023</p>
-                  </div>
+                <div>
+                  <p className="font-medium text-slate-900 dark:text-white">Amit Verma</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-500">March 12, 2023</p>
                 </div>
-                <blockquote className="italic text-slate-700 dark:text-slate-300">
-                  "PanEura didn't just give us technology - they gave us a vision of what our business could become.
-                  They understood our cultural context and helped us preserve our heritage while reaching global
-                  markets."
-                </blockquote>
               </div>
-            ))}
-            {[].map((testimonial, index) => (
-              <div
-                key={index + 2}
-                className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
-                    <Image
-                      src="https://randomuser.me/api/portraits/men/22.jpg"
-                      alt="Suresh Varghese"
-                      width={64}
-                      height={64}
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-medium text-slate-900 dark:text-white">Suresh Varghese</p>
-                    <p className="text-sm text-slate-500 dark:text-slate-500">November 15, 2023</p>
-                  </div>
+              <blockquote className="italic text-slate-700 dark:text-slate-300">
+                "I was skeptical about going digital - my family business had operated the same way for 40 years. Now I
+                can't imagine how we survived without these tools. Our customer base has tripled!"
+              </blockquote>
+            </div>
+
+            <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face"
+                    alt="Priya Mehta"
+                    width={64}
+                    height={64}
+                    className="object-cover"
+                  />
                 </div>
-                <blockquote className="italic text-slate-700 dark:text-slate-300">
-                  "The personalized approach made all the difference. They took time to understand our unique challenges
-                  as a rural service provider before suggesting any solutions. Five years later, we're still growing."
-                </blockquote>
+                <div>
+                  <p className="font-medium text-slate-900 dark:text-white">Priya Mehta</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-500">CEO, Cosmos IP</p>
+                </div>
               </div>
-            ))}
+              <blockquote className="italic text-slate-700 dark:text-slate-300">
+                "PanEura's IP management system revolutionized how we handle patent applications. The AI-powered
+                analytics have helped us identify valuable opportunities we would have otherwise missed. Our efficiency
+                has improved by 65% since implementation."
+              </blockquote>
+            </div>
+
+            <div className="bg-white dark:bg-slate-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
+                  <Image
+                    src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=150&h=150&fit=crop&crop=face"
+                    alt="Rajiv Kapoor"
+                    width={64}
+                    height={64}
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-medium text-slate-900 dark:text-white">Rajiv Kapoor</p>
+                  <p className="text-sm text-slate-500 dark:text-slate-500">CTO, KIPPS</p>
+                </div>
+              </div>
+              <blockquote className="italic text-slate-700 dark:text-slate-300">
+                "The custom automation solution PanEura built for our manufacturing processes has cut production time by
+                40%. Their team's deep understanding of both technology and business operations made the transition
+                seamless. We're now expanding to three new markets thanks to the increased capacity."
+              </blockquote>
+            </div>
           </div>
 
           <div className="text-center mt-12">
