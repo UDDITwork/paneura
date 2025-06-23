@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion, useInView } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Clock, Zap, Palette, Rocket, Users, ArrowRight, Check } from "lucide-react"
+import { Clock, Zap, Palette, Rocket, Users, ArrowRight } from "lucide-react"
 import { ScrollReveal } from "@/components/ui/animated-background"
 
 export default function RapidWebsite() {
@@ -17,23 +17,24 @@ export default function RapidWebsite() {
     {
       icon: <Zap className="h-5 w-5" />,
       title: "Lightning-Fast Development",
-      description: "We blend pre-built components with AI-assisted workflows to ship full-stack sites in 1 day."
+      description: "We blend pre-built components with AI-assisted workflows to ship full-stack sites in 1 day.",
     },
     {
       icon: <Palette className="h-5 w-5" />,
       title: "Tailored to You",
-      description: "Every site is branded, mobile-responsive, and performance-optimized."
+      description: "Every site is branded, mobile-responsive, and performance-optimized.",
     },
     {
       icon: <Rocket className="h-5 w-5" />,
       title: "Go Live in 24 Hours",
-      description: "From concept to deployment — domain, design, copy, hosting — all done under one roof."
+      description: "From concept to deployment — domain, design, copy, hosting — all done under one roof.",
     },
     {
       icon: <Users className="h-5 w-5" />,
       title: "Built for Entrepreneurs, Startups & Local Businesses",
-      description: "Whether it's your MVP, a product landing page, or a full store — we build it fast, so you can scale faster."
-    }
+      description:
+        "Whether it's your MVP, a product landing page, or a full store — we build it fast, so you can scale faster.",
+    },
   ]
 
   // Timeline data
@@ -42,26 +43,26 @@ export default function RapidWebsite() {
       time: "Hour 1-3",
       title: "Discovery & Design",
       description: "We gather requirements, create wireframes, and design key pages",
-      color: "from-purple-500 to-primary"
+      color: "from-purple-500 to-primary",
     },
     {
       time: "Hour 4-12",
       title: "Development",
       description: "Our team builds your responsive website with all core functionality",
-      color: "from-blue-500 to-primary"
+      color: "from-blue-500 to-primary",
     },
     {
       time: "Hour 13-18",
       title: "Content & Refinement",
       description: "We integrate your content, optimize for performance, and polish the design",
-      color: "from-indigo-500 to-primary"
+      color: "from-indigo-500 to-primary",
     },
     {
       time: "Hour 19-24",
       title: "Testing & Launch",
       description: "Final QA, domain setup, and deployment to get your site live",
-      color: "from-violet-500 to-primary"
-    }
+      color: "from-violet-500 to-primary",
+    },
   ]
 
   return (
@@ -96,7 +97,7 @@ export default function RapidWebsite() {
             <div className="relative h-[580px] perspective-container rounded-3xl overflow-hidden shadow-xl">
               {/* Background gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-primary/0 via-primary/5 to-primary/10 backdrop-blur-[1px] z-0 rounded-3xl"></div>
-              
+
               {/* Central floating badge */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
                 <motion.div
@@ -121,7 +122,7 @@ export default function RapidWebsite() {
                   </div>
                 </motion.div>
               </div>
-              
+
               {/* Image 1 - UI/UX Design */}
               <motion.div
                 className="absolute left-[5%] top-[5%] w-[55%] rounded-xl shadow-2xl overflow-hidden z-20"
@@ -132,15 +133,15 @@ export default function RapidWebsite() {
               >
                 <div className="relative w-full h-[280px] overflow-hidden rounded-xl">
                   <Image
-                    src="https://sjc.microlink.io/IAeVOs55sgpm8E5mj3xRm5oXPHg39XQFiNAiqkOIvEIjFn3YebUfy-Eh3WfUqmkuzebxYK_5xhiYVd0uJxv28Q.jpeg"
-                    alt="UI/UX design interface"
+                    src="https://sjc.microlink.io/HVEbxG9yi_A0FbQ4911TlU6FUvL0p3ykC7xvVlF_IekbRJCZcfeRnR9DMAjlmG9fvfM3vWcByer24ysjxt3Ogg.jpeg"
+                    alt="UI/UX design interface with modern elements"
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end">
                     <div className="p-5 text-white">
-                      <p className="font-semibold text-base uppercase tracking-wide">UI/UX Design</p>
-                      <p className="text-sm opacity-90">Intuitive interfaces that convert</p>
+                      <p className="font-semibold text-base uppercase tracking-wide">Modern UI/UX Design</p>
+                      <p className="text-sm opacity-90">Beautiful interfaces that engage users</p>
                     </div>
                   </div>
                 </div>
@@ -223,15 +224,17 @@ export default function RapidWebsite() {
           {/* Right side: Feature cards */}
           <div className="lg:col-span-5">
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">Why Choose Our 24-Hour Service</h3>
-              
+              <h3 className="text-2xl font-bold mb-6 inline-block border-b-2 border-primary pb-2">
+                Why Choose Our 24-Hour Service
+              </h3>
+
               {features.map((feature, index) => (
                 <motion.div
                   key={index}
                   className="bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all p-1"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                  transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
+                  transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                   whileHover={{ y: -4 }}
                 >
                   <div className="flex items-start">
@@ -264,38 +267,43 @@ export default function RapidWebsite() {
         <div className="mt-24 relative">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold mb-3">Our 24-Hour Development Process</h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">How we transform your idea into a fully functional website in just one day</p>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              How we transform your idea into a fully functional website in just one day
+            </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
             {/* Central line for mobile */}
             <div className="absolute left-4 top-0 h-full w-0.5 bg-gradient-to-b from-primary/50 to-purple-500/30 md:hidden"></div>
-            
+
             {timeline.map((step, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 className="relative"
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.5, delay: 0.3 + (index * 0.15) }}
+                transition={{ duration: 0.5, delay: 0.3 + index * 0.15 }}
               >
                 {/* Mobile timeline dot */}
                 <div className="absolute left-4 top-0 h-8 w-8 rounded-full bg-gradient-to-r from-primary to-purple-500 shadow-md flex items-center justify-center -translate-x-1/2 text-white text-sm font-bold md:hidden">
                   {index + 1}
                 </div>
-                
+
                 <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all border border-gray-100 dark:border-gray-700 md:h-full pl-12 md:pl-0 ml-8 md:ml-0">
-                  <div className="h-2 w-full bg-gradient-to-r border-b border-gray-100 dark:border-gray-700 hidden md:block rounded-t-xl" style={{ backgroundImage: `linear-gradient(to right, ${step.color})` }}></div>
-                  
+                  <div
+                    className="h-2 w-full bg-gradient-to-r border-b border-gray-100 dark:border-gray-700 hidden md:block rounded-t-xl"
+                    style={{ backgroundImage: `linear-gradient(to right, ${step.color})` }}
+                  ></div>
+
                   <div className="p-6">
                     <div className="rounded-full inline-flex items-center px-4 py-1 mb-4 text-sm font-medium bg-gradient-to-r from-primary/10 to-purple-500/10 text-primary">
                       <Clock className="w-3.5 h-3.5 mr-1.5" />
                       {step.time}
                     </div>
-                    
+
                     <h4 className="text-xl font-semibold mb-2">{step.title}</h4>
                     <p className="text-gray-600 dark:text-gray-300 text-sm">{step.description}</p>
-                    
+
                     <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
                       <div className="flex items-center text-primary text-sm">
                         <div className="mr-2 h-7 w-7 flex items-center justify-center rounded-full bg-primary/10">
@@ -310,12 +318,14 @@ export default function RapidWebsite() {
             ))}
           </div>
         </div>
-        
+
         {/* Final CTA */}
         <div className="mt-20 text-center">
           <div className="max-w-3xl mx-auto py-10 px-6 bg-gradient-to-r from-primary/10 to-purple-500/10 rounded-2xl shadow-sm border border-primary/10">
             <h3 className="text-2xl font-bold mb-4">Ready to launch your website in just 24 hours?</h3>
-            <p className="text-muted-foreground mb-6">Get your business online faster than ever with our rapid development service</p>
+            <p className="text-muted-foreground mb-6">
+              Get your business online faster than ever with our rapid development service
+            </p>
             <Button asChild variant="glow" size="lg" rounded="lg" className="group">
               <Link href="/contact" className="flex items-center gap-2 px-8">
                 Get Started Now
