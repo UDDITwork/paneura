@@ -4,7 +4,20 @@ import { useRef, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion, useInView } from "framer-motion"
-import { ExternalLink, Code, ShoppingCart, Stethoscope, Wind, Brain, Truck, MessageSquare, Scale } from "lucide-react"
+import {
+  ExternalLink,
+  Code,
+  ShoppingCart,
+  Stethoscope,
+  Wind,
+  Brain,
+  Truck,
+  MessageSquare,
+  Scale,
+  Car,
+  Wrench,
+  Layers,
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -16,6 +29,7 @@ export default function Portfolio() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
 
   const projects = [
+    // Healthcare Projects
     {
       title: "MediCio",
       description:
@@ -41,6 +55,105 @@ export default function Portfolio() {
       color: "from-green-500/20 to-emerald-500/20",
     },
     {
+      title: "Health Cart Platform",
+      description: "Advanced healthcare marketplace with telemedicine integration and prescription management",
+      url: "https://health-cart-clone-react.lovable.app/",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
+      category: "Healthcare",
+      icon: <Stethoscope className="h-5 w-5" />,
+      tags: ["Telemedicine", "React", "Healthcare"],
+      color: "from-teal-500/20 to-green-500/20",
+    },
+
+    // Automotive Projects
+    {
+      title: "KGK Car Solutions",
+      description:
+        "Complete automotive service platform with booking system, service tracking, and customer management for car maintenance and repairs",
+      url: "https://kgk-car-solutions.netlify.app/",
+      image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&h=600&fit=crop",
+      category: "Automotive",
+      icon: <Car className="h-5 w-5" />,
+      tags: ["Car Service", "Booking", "Management"],
+      color: "from-red-500/20 to-orange-500/20",
+      contact: "+91-8860661641, kgkcarsolutions@gmail.com",
+      location: "Ghaziabad, U.P.",
+    },
+    {
+      title: "Elite Car Detailing",
+      description:
+        "Premium car detailing service platform with online booking, service packages, and customer portfolio showcase",
+      url: "https://elite-car-detailing.netlify.app/",
+      image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&h=600&fit=crop",
+      category: "Automotive",
+      icon: <Car className="h-5 w-5" />,
+      tags: ["Car Detailing", "Premium", "Booking"],
+      color: "from-purple-500/20 to-pink-500/20",
+      contact: "8851115656",
+    },
+    {
+      title: "RG Motors & Car Accessories",
+      description:
+        "Comprehensive automotive parts and accessories e-commerce platform with inventory management and customer support",
+      url: "https://rg-motors-and-car-accessories.netlify.app/",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
+      category: "Automotive",
+      icon: <Wrench className="h-5 w-5" />,
+      tags: ["Auto Parts", "E-commerce", "Accessories"],
+      color: "from-blue-500/20 to-indigo-500/20",
+      contact: "085889 95678",
+      location: "Kakrola, Delhi",
+    },
+    {
+      title: "Auto Essential Mukundpur",
+      description: "Local automotive essentials store with online catalog, service booking, and parts ordering system",
+      url: "https://auto-essentials-mukundpur-delhi.netlify.app/",
+      image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&h=600&fit=crop",
+      category: "Automotive",
+      icon: <Wrench className="h-5 w-5" />,
+      tags: ["Auto Parts", "Local Service", "Delhi"],
+      color: "from-green-500/20 to-teal-500/20",
+      contact: "9899896980",
+      location: "Mukundpur, Delhi",
+    },
+    {
+      title: "Shri Nath Automobiles",
+      description:
+        "Professional auto repair services with diagnostic tools, service history tracking, and customer management",
+      url: "https://shri-nath-auto-repair-services.netlify.app/",
+      image: "https://images.unsplash.com/photo-1632823471565-1ecdf7a5e0b5?w=800&h=600&fit=crop",
+      category: "Automotive",
+      icon: <Wrench className="h-5 w-5" />,
+      tags: ["Auto Repair", "Diagnostics", "Service"],
+      color: "from-orange-500/20 to-red-500/20",
+      contact: "098108 37026",
+    },
+    {
+      title: "Balaji Motors",
+      description:
+        "Full-service automotive dealership with vehicle sales, financing options, and after-sales service management",
+      url: "https://balaji-motors-wheels-n-deals.lovable.app/",
+      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&h=600&fit=crop",
+      category: "Automotive",
+      icon: <Car className="h-5 w-5" />,
+      tags: ["Car Dealership", "Sales", "Financing"],
+      color: "from-yellow-500/20 to-orange-500/20",
+    },
+    {
+      title: "Luster Mumbai",
+      description:
+        "B2B garments manufacturing platform with order management, production tracking, and wholesale client portal",
+      url: "https://preview--cotton-comfort-mumbai-find.lovable.app/",
+      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+      category: "Manufacturing",
+      icon: <Layers className="h-5 w-5" />,
+      tags: ["B2B", "Garments", "Manufacturing"],
+      color: "from-indigo-500/20 to-purple-500/20",
+      location: "Mumbai",
+    },
+
+    // Legal Tech Projects
+    {
       title: "EASEIP Vision",
       description: "Intellectual property management system with AI-powered patent analysis and portfolio tracking",
       url: "https://preview-a369b0d8--ease-ip-vision-web.lovable.app/",
@@ -52,6 +165,18 @@ export default function Portfolio() {
       color: "from-purple-500/20 to-indigo-500/20",
     },
     {
+      title: "INVENTIP Legal",
+      description: "Comprehensive legal document management and intellectual property tracking system",
+      url: "https://dulcet-rabanadas-c1e4b1.netlify.app/",
+      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
+      category: "Legal Tech",
+      icon: <Scale className="h-5 w-5" />,
+      tags: ["Legal", "Documents", "IP Management"],
+      color: "from-slate-500/20 to-gray-500/20",
+    },
+
+    // IoT Projects
+    {
       title: "UrBON Air Cool",
       description: "Smart air conditioning control system with IoT integration and energy optimization features",
       url: "https://silly-nasturtium-829415.netlify.app/#home",
@@ -61,16 +186,8 @@ export default function Portfolio() {
       tags: ["IoT", "Smart Home", "Energy"],
       color: "from-cyan-500/20 to-blue-500/20",
     },
-    {
-      title: "Health Cart Platform",
-      description: "Advanced healthcare marketplace with telemedicine integration and prescription management",
-      url: "https://health-cart-clone-react.lovable.app/",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
-      category: "Healthcare",
-      icon: <Stethoscope className="h-5 w-5" />,
-      tags: ["Telemedicine", "React", "Healthcare"],
-      color: "from-teal-500/20 to-green-500/20",
-    },
+
+    // Educational Projects
     {
       title: "DSA Visualizer",
       description: "Interactive data structures and algorithms visualization tool with step-by-step animations",
@@ -81,6 +198,8 @@ export default function Portfolio() {
       tags: ["Algorithms", "Education", "Visualization"],
       color: "from-orange-500/20 to-red-500/20",
     },
+
+    // Delivery Projects
     {
       title: "Blinkit Clone",
       description: "Fast delivery application with real-time tracking, inventory management, and instant checkout",
@@ -91,6 +210,8 @@ export default function Portfolio() {
       tags: ["Delivery", "Real-time", "Mobile"],
       color: "from-yellow-500/20 to-orange-500/20",
     },
+
+    // AI Assistant Projects
     {
       title: "AI Electronics Assistant",
       description: "Intelligent chatbot for electronics component recommendations and technical support",
@@ -101,19 +222,20 @@ export default function Portfolio() {
       tags: ["AI", "Chatbot", "Electronics"],
       color: "from-indigo-500/20 to-purple-500/20",
     },
-    {
-      title: "INVENTIP Legal",
-      description: "Comprehensive legal document management and intellectual property tracking system",
-      url: "https://dulcet-rabanadas-c1e4b1.netlify.app/",
-      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=600&fit=crop",
-      category: "Legal Tech",
-      icon: <Scale className="h-5 w-5" />,
-      tags: ["Legal", "Documents", "IP Management"],
-      color: "from-slate-500/20 to-gray-500/20",
-    },
   ]
 
-  const categories = ["All", "Healthcare", "E-commerce", "Legal Tech", "IoT", "Educational", "Delivery", "AI Assistant"]
+  const categories = [
+    "All",
+    "Healthcare",
+    "Automotive",
+    "Manufacturing",
+    "E-commerce",
+    "Legal Tech",
+    "IoT",
+    "Educational",
+    "Delivery",
+    "AI Assistant",
+  ]
   const [activeCategory, setActiveCategory] = useState("All")
 
   const filteredProjects =
@@ -137,8 +259,8 @@ export default function Portfolio() {
           </div>
           <h2 className="mb-5 text-4xl font-bold md:text-5xl">Featured Projects</h2>
           <p className="mx-auto max-w-3xl text-lg text-muted-foreground">
-            Explore our diverse portfolio of innovative solutions across healthcare, e-commerce, legal tech, and
-            AI-powered applications
+            Explore our diverse portfolio of innovative solutions across healthcare, automotive, e-commerce, legal tech,
+            and AI-powered applications
           </p>
         </ScrollReveal>
 
@@ -192,7 +314,7 @@ export default function Portfolio() {
                       } flex items-end`}
                     >
                       <div className="p-6 w-full">
-                        <div className="flex gap-2 mb-3">
+                        <div className="flex gap-2 mb-3 flex-wrap">
                           {project.tags.map((tag, tagIndex) => (
                             <Badge
                               key={tagIndex}
@@ -230,6 +352,22 @@ export default function Portfolio() {
                     </h3>
                     <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.description}</p>
 
+                    {/* Contact and Location Info for Automotive projects */}
+                    {project.category === "Automotive" && (project.contact || project.location) && (
+                      <div className="mb-4 space-y-1">
+                        {project.contact && (
+                          <p className="text-xs text-muted-foreground">
+                            <span className="font-medium">Contact:</span> {project.contact}
+                          </p>
+                        )}
+                        {project.location && (
+                          <p className="text-xs text-muted-foreground">
+                            <span className="font-medium">Location:</span> {project.location}
+                          </p>
+                        )}
+                      </div>
+                    )}
+
                     {/* Action Button */}
                     <Link
                       href={project.url}
@@ -246,6 +384,47 @@ export default function Portfolio() {
             </motion.div>
           ))}
         </div>
+
+        {/* Automotive Services Highlight */}
+        {activeCategory === "Automotive" && (
+          <motion.div
+            className="mt-16 p-8 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl border border-red-500/10"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold mb-2 flex items-center justify-center gap-2">
+                <Car className="h-6 w-6 text-red-500" />
+                Automotive Solutions Portfolio
+              </h3>
+              <p className="text-muted-foreground">
+                Comprehensive digital solutions for the automotive industry - from car dealerships to service centers
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div className="p-4 bg-white/50 rounded-lg">
+                <h4 className="font-semibold text-red-600 mb-2">Service Management</h4>
+                <p className="text-sm text-muted-foreground">
+                  Booking systems, service tracking, and customer management
+                </p>
+              </div>
+              <div className="p-4 bg-white/50 rounded-lg">
+                <h4 className="font-semibold text-orange-600 mb-2">E-commerce Platforms</h4>
+                <p className="text-sm text-muted-foreground">
+                  Auto parts, accessories, and inventory management systems
+                </p>
+              </div>
+              <div className="p-4 bg-white/50 rounded-lg">
+                <h4 className="font-semibold text-yellow-600 mb-2">Digital Presence</h4>
+                <p className="text-sm text-muted-foreground">
+                  Professional websites with online booking and customer portals
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
 
         {/* Call to Action */}
         <motion.div

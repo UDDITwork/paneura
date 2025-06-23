@@ -19,8 +19,47 @@ const nextConfig = {
     ],
   },
   experimental: {
-    // Removing optimizeCss: true since critters package is missing
     optimizePackageImports: ['framer-motion', 'lucide-react'],
+  },
+  // Enable static generation for better SEO
+  output: 'standalone',
+  // Compress responses
+  compress: true,
+  // Enable SWC minification
+  swcMinify: true,
+  // Generate static sitemap and robots.txt
+  trailingSlash: false,
+  // Security headers
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
+          },
+        ],
+      },
+    ]
+  },
+  // Redirects for SEO
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ]
   },
 }
 

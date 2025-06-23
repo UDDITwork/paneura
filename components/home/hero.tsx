@@ -5,7 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { AnimatedGradientText, FloatingElement, ScrollReveal } from "@/components/ui/animated-background"
-import { ArrowRight, Bot, Brain, Cpu, Database, Layers } from "lucide-react"
+import { ArrowRight, Bot, Brain, Cpu, Database, Layers, Phone } from "lucide-react"
 
 export default function Hero() {
   const containerRef = useRef(null)
@@ -67,9 +67,13 @@ export default function Hero() {
             className="mb-6"
           >
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
-              <AnimatedGradientText>{"{PanEura Automations}"}</AnimatedGradientText>
+              <AnimatedGradientText>Automation & AI Workflows</AnimatedGradientText>
+              <br />
+              <span className="text-foreground">Built for Global Growth</span>
             </h1>
-            <p className="text-2xl md:text-3xl mt-2 font-medium">Get Rid of Boring Tasks with Ai.</p>
+            <p className="text-xl md:text-2xl mt-4 font-medium text-muted-foreground">
+              From n8n pipelines to AI voice agents, PanEura delivers 24/7 efficiency.
+            </p>
           </motion.div>
 
           <motion.p
@@ -78,8 +82,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            We help small businesses scale big, generate revenue, provide online recognition and identity through
-            intelligent automation solutions.
+            Transform your business with intelligent automation solutions. We help companies in India, USA, UAE,
+            Australia, and Europe unlock growth through AI workflows and custom integrations.
           </motion.p>
 
           <motion.div
@@ -96,7 +100,7 @@ export default function Hero() {
               className="font-medium relative overflow-hidden group"
             >
               <Link href="/contact" className="flex items-center">
-                Get Started
+                Book a Free Automation Audit
                 <motion.span
                   className="ml-2 inline-block"
                   animate={{ x: [0, 5, 0] }}
@@ -114,8 +118,32 @@ export default function Hero() {
             </Button>
 
             <Button asChild variant="glow-outline" size="xl" rounded="full" className="hover-lift">
-              <Link href="/services">Explore Services</Link>
+              <Link href="tel:+917456886877" className="flex items-center gap-2">
+                <Phone className="h-5 w-5" />
+                +91-745-688-6877
+              </Link>
             </Button>
+          </motion.div>
+
+          {/* Trust indicators */}
+          <motion.div
+            className="mt-8 flex flex-wrap gap-4 text-sm text-muted-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-green-500"></div>
+              <span>n8n Certified Partners</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-blue-500"></div>
+              <span>Zapier Expert Agency</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-purple-500"></div>
+              <span>AI Voice Agent Specialists</span>
+            </div>
           </motion.div>
         </ScrollReveal>
 
