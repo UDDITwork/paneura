@@ -14,6 +14,7 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
+    { name: "Automations", href: "/automations", highlight: true },
     { name: "Contact Us", href: "/contact" },
   ]
 
@@ -29,7 +30,13 @@ export default function Navbar() {
 
         <nav className="hidden md:flex md:items-center md:gap-6">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="text-sm font-medium transition-colors hover:text-primary">
+            <Link
+              key={link.name}
+              href={link.href}
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                link.highlight ? "bg-primary/10 px-3 py-1 rounded-full text-primary font-semibold" : ""
+              }`}
+            >
               {link.name}
             </Link>
           ))}
@@ -54,7 +61,9 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="text-lg font-medium transition-colors hover:text-primary"
+                    className={`text-lg font-medium transition-colors hover:text-primary ${
+                      link.highlight ? "bg-primary/10 px-3 py-1 rounded-full text-primary font-semibold" : ""
+                    }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
