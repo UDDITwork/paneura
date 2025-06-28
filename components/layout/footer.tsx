@@ -1,13 +1,14 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone, Building2, Home } from "lucide-react"
 
 export default function Footer() {
   return (
     <footer className="border-t bg-background">
       <div className="container px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
             <Link href="/" className="mb-4 flex items-center gap-2">
               <Image
                 src="https://pbs.twimg.com/media/GpaQJvnbIAAZXQc?format=jpg&name=small"
@@ -16,20 +17,20 @@ export default function Footer() {
                 height={40}
                 className="rounded-md"
               />
-              <span className="text-xl font-bold">PanEura</span>
+              <span className="text-xl font-bold">PanEura Automations</span>
             </Link>
-            <p className="mt-4 text-sm text-muted-foreground">
+            <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
               We help small businesses scale big, generate revenue, provide online recognition and identity through
               intelligent digital infrastructure and automation solutions.
             </p>
-            <div className="mt-4 flex space-x-4">
+            <div className="mt-6 flex space-x-4">
               <a
                 href="https://x.com/PaneuraAutomat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Follow us on Twitter"
               >
-                <span className="sr-only">Twitter</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -48,9 +49,9 @@ export default function Footer() {
                 href="https://www.reddit.com/user/Individual_Set5597/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Follow us on Reddit"
               >
-                <span className="sr-only">Reddit</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -71,9 +72,11 @@ export default function Footer() {
               </a>
             </div>
           </div>
+
+          {/* Quick Links */}
           <div>
             <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/" className="text-muted-foreground transition-colors hover:text-primary">
                   Home
@@ -94,11 +97,18 @@ export default function Footer() {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link href="/portfolio" className="text-muted-foreground transition-colors hover:text-primary">
+                  Portfolio
+                </Link>
+              </li>
             </ul>
           </div>
+
+          {/* Services */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Services</h3>
-            <ul className="space-y-2 text-sm">
+            <h3 className="mb-4 text-lg font-semibold">Our Services</h3>
+            <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/services" className="text-muted-foreground transition-colors hover:text-primary">
                   Website Development
@@ -119,28 +129,128 @@ export default function Footer() {
                   Business Analytics
                 </Link>
               </li>
+              <li>
+                <Link href="/services" className="text-muted-foreground transition-colors hover:text-primary">
+                  Digital Marketing
+                </Link>
+              </li>
             </ul>
           </div>
+
+          {/* Contact Information */}
           <div>
-            <h3 className="mb-4 text-lg font-semibold">Contact</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start">
-                <MapPin className="mr-2 h-5 w-5 text-primary" />
-                <span className="text-muted-foreground">Noida, Sector 16, OffizSquare, U.P, India</span>
-              </li>
-              <li className="flex items-start">
-                <Phone className="mr-2 h-5 w-5 text-primary" />
-                <span className="text-muted-foreground">+91-8936013767, +91-7456886877</span>
-              </li>
-              <li className="flex items-start">
-                <Mail className="mr-2 h-5 w-5 text-primary" />
-                <span className="text-muted-foreground">solutions@paneura.site</span>
-              </li>
-            </ul>
+            <h3 className="mb-4 text-lg font-semibold">Get In Touch</h3>
+            
+            {/* Email Addresses */}
+            <div className="mb-4">
+              <h4 className="mb-2 text-sm font-medium text-foreground">Email</h4>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start">
+                  <Mail className="mr-2 h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                  <a 
+                    href="mailto:solutions@paneura.site"
+                    className="text-muted-foreground hover:text-primary transition-colors break-all"
+                  >
+                    solutions@paneura.site
+                  </a>
+                </li>
+                <li className="flex items-start">
+                  <Mail className="mr-2 h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                  <a 
+                    href="mailto:paneura.automations247@gmail.com"
+                    className="text-muted-foreground hover:text-primary transition-colors break-all"
+                  >
+                    paneura.automations247@gmail.com
+                  </a>
+                </li>
+                <li className="flex items-start">
+                  <Mail className="mr-2 h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                  <a 
+                    href="mailto:paneura.automations@gmail.com"
+                    className="text-muted-foreground hover:text-primary transition-colors break-all"
+                  >
+                    paneura.automations@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Phone Numbers */}
+            <div className="mb-4">
+              <h4 className="mb-2 text-sm font-medium text-foreground">Phone</h4>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center">
+                  <Phone className="mr-2 h-4 w-4 text-primary flex-shrink-0" />
+                  <a 
+                    href="tel:+917456886877"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    +91-7456886877
+                  </a>
+                </li>
+                <li className="flex items-center">
+                  <Phone className="mr-2 h-4 w-4 text-primary flex-shrink-0" />
+                  <a 
+                    href="tel:+919672538062"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    +91-9672538062
+                  </a>
+                </li>
+                <li className="flex items-center">
+                  <Phone className="mr-2 h-4 w-4 text-primary flex-shrink-0" />
+                  <a 
+                    href="tel:+919537253552"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    +91-9537253552
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Addresses */}
+            <div>
+              <h4 className="mb-2 text-sm font-medium text-foreground">Locations</h4>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start">
+                  <Building2 className="mr-2 h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="text-xs font-medium text-foreground mb-1">Office</div>
+                    <span className="text-muted-foreground">
+                      Sector 16, OffizSquare, Noida, U.P., India
+                    </span>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <Home className="mr-2 h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="text-xs font-medium text-foreground mb-1">Operations</div>
+                    <span className="text-muted-foreground">
+                      Sector 66, SKY HOMES, Noida, Uttar Pradesh, India
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} PanEura Automations. All rights reserved.</p>
+        
+        <div className="mt-12 border-t pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
+            <p>&copy; {new Date().getFullYear()} PanEura Automations. All rights reserved.</p>
+            <div className="mt-4 md:mt-0 flex space-x-6">
+              <Link href="/privacy" className="hover:text-primary transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-primary transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/sitemap" className="hover:text-primary transition-colors">
+                Sitemap
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
