@@ -62,7 +62,7 @@ export default function AboutPage() {
               Our Origin Story
             </h2>
             <p className="text-lg mb-6 text-slate-700 dark:text-slate-300">
-              PanEura began in 2018 when our founders witnessed countless small businesses struggling to navigate the
+              PanEura Automations began in January 2025 when our founders witnessed countless small businesses struggling to navigate the
               digital landscape. Working from a small apartment with three passionate developers, we created our first
               automation solution for a local bakery that helped them manage online orders during the pandemic.
             </p>
