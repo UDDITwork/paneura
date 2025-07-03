@@ -17,21 +17,21 @@ export function AnimatedBackground() {
         <>
           <motion.div
             className="absolute -left-20 -top-20 h-[30rem] w-[30rem] rounded-full
-                       bg-gradient-to-br from-primary/20 to-purple-500/20 blur-3xl"
+                       bg-gradient-to-br from-blue-500/20 to-cyan-500/20 blur-3xl" // Adjusted colors
             animate={{ x: [0, 30, 0], y: [0, 40, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
           />
 
           <motion.div
             className="absolute -bottom-32 right-0 h-[35rem] w-[35rem] rounded-full
-                       bg-gradient-to-tr from-blue-500/10 to-primary/20 blur-3xl"
+                       bg-gradient-to-tr from-blue-600/10 to-blue-400/20 blur-3xl" // Adjusted colors
             animate={{ x: [0, -40, 0], y: [0, 30, 0], scale: [1, 1.2, 1] }}
             transition={{ duration: 25, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
           />
 
           <motion.div
             className="absolute left-1/3 top-1/3 h-[25rem] w-[25rem] rounded-full
-                       bg-gradient-to-r from-cyan-500/10 to-indigo-500/10 blur-3xl"
+                       bg-gradient-to-r from-blue-400/10 to-blue-700/10 blur-3xl" // Adjusted colors
             animate={{ x: [0, 60, 0], y: [0, -30, 0], scale: [1, 1.1, 1] }}
             transition={{ duration: 18, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
           />
@@ -39,7 +39,7 @@ export function AnimatedBackground() {
       ) : (
         <div
           className="absolute inset-0 bg-gradient-to-br
-                        from-primary/5 via-purple-500/5 to-blue-500/5"
+                        from-blue-500/5 via-blue-600/5 to-blue-700/5" // Adjusted colors for mobile
         />
       )}
     </div>
@@ -58,7 +58,7 @@ export function AnimatedGradientText({
 }) {
   return (
     <span
-      className={`bg-gradient-to-r from-primary via-purple-500 to-blue-600
+      className={`bg-gradient-to-r from-primary via-blue-500 to-blue-600
                   bg-clip-text text-transparent ${className}`}
     >
       {children}
@@ -142,8 +142,8 @@ export function AnimatedBorder({
     <div className={`group relative rounded-lg p-px ${className}`}>
       <div
         className="absolute inset-0 rounded-lg bg-gradient-to-r
-                      from-primary via-purple-500 to-primary
-                      bg-[length:200%_100%] animate-gradient"
+                      from-primary via-blue-500 to-primary
+                      bg-[length:200%_100%] animate-gradient" // Adjusted colors
       />
       <div
         className="relative rounded-[calc(theme(borderRadius.lg)-1px)]
@@ -156,7 +156,7 @@ export function AnimatedBorder({
 }
 
 /* ------------------------------------------------------------------ */
-/*  NEW – ScrollReveal helper (used by /automations)                   */
+/*  ScrollReveal helper (used by /automations)                        */
 /* ------------------------------------------------------------------ */
 type ScrollRevealProps = {
   children: ReactNode

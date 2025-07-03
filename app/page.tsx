@@ -9,7 +9,8 @@ import Testimonials from "@/components/home/testimonials"
 import TechStack from "@/components/home/tech-stack"
 import CreativeSupport from "@/components/home/creative-support"
 import RapidWebsite from "@/components/home/rapid-website"
-import Portfolio from "@/components/home/portfolio"
+// Remove the import for the Portfolio component
+// import Portfolio from "@/components/home/portfolio"
 import { generateOrganizationSchema, generateFAQSchema } from "@/lib/structured-data"
 import { seoConfig } from "@/lib/seo-config"
 
@@ -115,7 +116,7 @@ export default function Home() {
         <AiAgents />
         <VerticalDomains />
         <ServicesOverview />
-        <Portfolio />
+        {/* Remove the Portfolio component from the main content */}
         <CreativeSupport />
         <RapidWebsite />
         <TechStack />

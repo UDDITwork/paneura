@@ -20,13 +20,18 @@ const config = {
     },
     extend: {
       colors: {
+        // New color palette inspired by the image
+        "dark-background": "#1A1A1A", // Very dark grey/black
+        "light-blue-glow": "#00BFFF", // Bright cyan-blue for glow
+        "deep-blue": "#004488", // Deeper blue for subtle variations
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "hsl(var(--primary))", // Vibrant blue
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
